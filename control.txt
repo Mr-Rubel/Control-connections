@@ -1,0 +1,22 @@
+open powershell as administrator
+
+if ssh server already installed
+command = Get-WindowsCapability -Online -Name Openssh.Client~~~~0.0.1.0
+
+
+new installation ssh server
+Add-WindowsCapability -Online -Name Openssh.Client~~~~0.0.1.0
+Get-Service -Name ssh*
+Set-Service -Name sshd -StartupType 'Automatic'
+Start-Service -Name sshd
+
+
+How to Install SSH Server on Windows 10
+https://youtu.be/HCmEB5qtkSY
+
+
+How to Setup an FTP Server in Windows 7
+https://youtu.be/nWpZkhXnhds
+
+How to Setup an FTP Server in Windows 10
+https://youtu.be/Cd2k9nQSdro
